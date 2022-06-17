@@ -1,4 +1,4 @@
-from typing import Dict, Optional, Union
+from typing import Any, Dict, Optional, Union
 
 from aiohttp import ClientSession
 
@@ -7,9 +7,7 @@ from wottle.exception import CityError, TokenError
 
 class Wottle:
     def __init__(
-        self,
-        token: Optional[str] = None,
-        language: str = "ru"
+        self, token: Optional[str] = None, language: str = "ru"
     ) -> None:
 
         if not token:
@@ -29,10 +27,7 @@ class Wottle:
             }
         )
 
-    async def get_weather(
-        self,
-        city: Optional[str] = None
-    ) -> Union[str]:
+    async def get_weather(self, city: Optional[str] = None) -> Dict[str, Any]:
 
         if not city:
             raise CityError("Invalid city! In an empty city.")
@@ -51,8 +46,4 @@ class Wottle:
 
     def in_json(self, city: Union[str]) -> Dict[str, str]:
 
-        return {
-            "q": city,
-            "lang": self.language,
-            "appid": self.token
-        }
+        return {"q": city, "lang": self.language, "appid": self.token}
