@@ -9,9 +9,6 @@
     <a href="https://github.com/qxtony/wottle/issues">
         <img src="https://img.shields.io/github/issues/qxtony/wottle" alt="Issues">
     </a>
-    <a href="https://pypi.org/project/wottle/">
-        <img src="https://img.shields.io/pypi/v/wottle?colorB=brightgreen" alt="Package version">
-    </a>
     <a href="https://github.com/qxtony/wottle/blob/main/LICENSE">
         <img src="https://img.shields.io/github/license/qxtony/wottle.svg" alt="License">
     </a>
@@ -19,10 +16,8 @@
 
 ## Installation
 
-Stable version:
-
 ```bash
-pip install -U wottle
+pip install https://github.com/qxtony/wottle/archive/main.zip
 ```
 ## Quickstart
 
